@@ -1,0 +1,44 @@
+{
+    "name": "André Andrade (andreandrade141)",
+    "jobTitle": "Software Engineer",
+    "github": "andreandrade141",
+    "bg_image": "",
+    "playlists": {
+        "games": [
+            {
+                "title": "god of war",
+                "url": "some url",
+                "thumb": "image"
+            },
+            {
+                "title": "destiny2",
+                "url": "some other url",
+                "thumb": "other image"
+            }
+        ],
+        "movies": [
+            {
+                "title": "star wars",
+                "url": "some url",
+                "thumb": "image"
+            },
+            {
+                "title": "star trek",
+                "url": "some other url",
+                "thumb": "other image"
+            }
+        ],
+        "music": [
+            {
+                "title": "metallica",
+                "url": "some url",
+                "thumb": "image"
+            },
+            {
+                "title": "iron maiden",
+                "url": "some other url",
+                "thumb": "other image"
+            }
+        ]
+    }
+}
