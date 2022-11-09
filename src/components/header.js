@@ -8,8 +8,8 @@ const StyledHeader = styled.div`
         width: 100%;
     }
     .user-info img {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         padding: 16px 32px;
         gap: 16px;
