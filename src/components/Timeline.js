@@ -46,32 +46,36 @@ export const StyledTimeline = styled.div`
   }
 `;
 
-export function Timeline(props) {
-    const playlistNames = Object.keys(props.playlists);
-    return (
-        <StyledTimeline>
-            {playlistNames.map((playlistName) => {
-                const videos = props.playlists[playlistName];
+export function Timeline({ searchValue, ...props }) {
+  const playlistNames = Object.keys(props.playlists);
+  return (
+    <StyledTimeline>
+      {playlistNames.map((playlistName) => {
+        const videos = props.playlists[playlistName];
+        return (
+          <section key={playlistName}>
+            <h2>{playlistName}</h2>
+            <div>
+              {videos.filter((video) => {
+                const normalizedTitle = video.title.toLowerCase();
+                const normalizedsearchValue = searchValue.toLowerCase();
+                return normalizedTitle.includes(normalizedsearchValue);
+              }).map((video) => {
                 return (
-                    <section>
-                        <h2>{playlistName}</h2>
-                        <div>
-                            {videos.map((video) => {
-                                return (
-                                    <a href={video.url}>
-                                        <img src={video.thumb} />
-                                        <span>
-                                            {video.title}
-                                        </span>
-                                    </a>
-                                )
-                            })}
-                        </div>
-                    </section>
-                );
-            })}
-        </StyledTimeline>
-    )
+                  <a key={video.url} href={video.url}>
+                    <img src={video.thumb} />
+                    <span>
+                      {video.title}
+                    </span>
+                  </a>
+                )
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </StyledTimeline>
+  )
 }
 
 export default Timeline;
