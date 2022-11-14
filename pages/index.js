@@ -10,7 +10,6 @@ function HomePage() {
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
     return (
         <>
-            <CSSReset />
             <div >
                 <Menu valorDoFiltro={valorDoFiltro}
                     setValorDoFiltro={setValorDoFiltro} />
